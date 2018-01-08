@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "logineatm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>login eatm</h2>
+
+@using(Html.BeginForm("cheking","Eam")){
+<label for="accountno">Account Id</label>
+@Html.TextBox("accountno")
+<label for="pinNo">Account Id</label>
+@Html.TextBox("pinNo")
+
+<button type="submit" class="btn btn-primary">Login</button>
+}
+

@@ -1,0 +1,20 @@
+﻿@model EatmMVC.Models.Account
+@{
+    ViewBag.Title = "cheking";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Login Success</h2>
+
+<table>
+    <td>
+        <tr>Your Account Number: @Model.CardNumber</tr>
+        <tr>Your Balance: @Model.Balance</tr>
+    </td>
+</table>
+
+@using (Html.BeginForm("withdraw", "Eam", new {id = Model.Id}))
+{
+    @Html.TextBox("value")
+    <button type="submit" class="btn btn-primary">Withdraw</button>
+}
